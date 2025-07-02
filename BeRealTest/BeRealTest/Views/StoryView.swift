@@ -25,6 +25,7 @@ struct StoryBubbleView: View {
             Text(story.user.name)
                 .font(.caption)
                 .lineLimit(1)
+            
         }
         .frame(width: 70)
     }

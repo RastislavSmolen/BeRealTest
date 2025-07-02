@@ -11,73 +11,56 @@ struct FeedCellView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            HStack {
-                AsyncImage(url: URL(string: story.user.profileImageURL)) { image in
-                    image.resizable()
+            ZStack(alignment: .topLeading) {
+                AsyncImage(url: URL(string: story.imageURL)) { image in
+                    image
+                        .resizable()
+                        .scaledToFill()
                 } placeholder: {
-                    Circle().fill(Color.gray)
+                    Rectangle().fill(Color.gray.opacity(0.3))
                 }
-                .frame(width: 40, height: 40)
-                .clipShape(Circle())
-                
-                Text(story.user.name)
-                    .font(.subheadline)
-                    .bold()
-                
-                Spacer()
-            }
-            .padding(.horizontal)
-            
-            AsyncImage(url: URL(string: story.imageURL)) { image in
-                image
-                    .resizable()
-                    .scaledToFill()
-            } placeholder: {
-                Rectangle().fill(Color.gray.opacity(0.3))
-            }
-            .frame(height: 300)
-            .clipped()
-            VStack(spacing: 20) {
-                Button(action: {
-                    print("tapped")
-                }) {
+                .frame(height: 300)
+                .clipped()
+                VStack(spacing: 5) {
+                    Spacer().fixedSize()
                     HStack {
-                        Image(systemName: "heart")
-                            .resizable()
-                            .frame(width: 20, height: 20)
-                            .foregroundStyle(.black)
-                        Text("250K")
-                            .foregroundStyle(.black)
-                            .font(.caption)
+                        AsyncImage(url: URL(string: story.user.profileImageURL)) { image in
+                            image.resizable()
+                        } placeholder: {
+                            Circle().fill(Color.gray)
+                        }
+                        .frame(width: 40, height: 40)
+                        .clipShape(Circle())
+                            Text(story.user.name)
+                                .font(.subheadline)
+                                .bold()
+                                .foregroundStyle(.white)
+                        Spacer()
+                            Button(action: {
+                                print("Tapped")
+                            }) {
+                                Text("Subscribe")
+                                    .foregroundColor(.white)
+                                    .font(.caption)
+                                    .frame(width: 65, height: 20)
+                                    .overlay(RoundedRectangle(cornerRadius: 1)
+                                        .stroke(Color.white, lineWidth: 1))
+                                
+                            }
+                        
+                            Button(action: {
+                                print("Tapped")
+                            }) {
+                                Image(systemName: "ellipsis")
+                                    .foregroundStyle(.white)
+                            }
                     }
-                    HStack {
-                        Image(systemName: "message")
-                            .resizable()
-                            .frame(width: 20, height: 20)
-                            .foregroundStyle(.black)
-                        Text("250K")
-                            .foregroundStyle(.black)
-                            .font(.caption)
-                    }
-                    HStack {
-                        Image(systemName: "paperplane")
-                            .resizable()
-                            .frame(width: 20, height: 20)
-                            .foregroundStyle(.black)
-                        Text("250K")
-                            .foregroundStyle(.black)
-                            .font(.caption)
-                    }
-                    
                 }
-                
-                Text("Posted on \(story.timestamp.formatted(date: .abbreviated, time: .shortened))")
-                    .font(.caption)
-                    .foregroundColor(.gray)
-                    .padding(.horizontal)
-                    .padding(.bottom, 10)
+                .padding(.horizontal)
+               
             }
             
+            FeedInfoView(story: story)
         }
         .background(Color.white)
         .cornerRadius(10)
@@ -86,5 +69,5 @@ struct FeedCellView: View {
     }
 }
 #Preview {
-    FeedCellView(story: Story(id: UUID() , user: User(id: UUID(), name: "Ras", profileImageURL: ""), imageURL: "", timestamp: Date.now))
+    FeedCellView(story: Story(id: UUID() , user: User(id: UUID(), name: "Ras", profileImageURL: ""), imageURL:"https://i.pravatar.cc/150", timestamp: Date.now))
 }
