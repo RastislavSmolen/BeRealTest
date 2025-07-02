@@ -11,4 +11,8 @@ struct Story: Identifiable {
     let user: User
     let imageURL: String
     let timestamp: Date
+    let caption: String
+    let likes: Int
+    let shares: Int
+    let comments: Int
 }

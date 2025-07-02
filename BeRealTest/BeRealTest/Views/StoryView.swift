@@ -30,10 +30,4 @@ struct StoryBubbleView: View {
         .frame(width: 70)
     }
 }
-#Preview {
-    HStack {
-        StoryBubbleView(story: .init(id: .init(), user: .init(id: .init(), name: "Test", profileImageURL: ""), imageURL: "", timestamp: Date()))
-        StoryBubbleView(story: .init(id: .init(), user: .init(id: .init(), name: "Test", profileImageURL: ""), imageURL: "", timestamp: Date()))
 
-    }
-}

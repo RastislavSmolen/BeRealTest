@@ -20,7 +20,7 @@ struct FeedInfoView: View {
                         .resizable()
                         .frame(width: 20, height: 20)
                         .foregroundStyle(.black)
-                    Text("250K")
+                    Text(story.likes.description)
                         .foregroundStyle(.black)
                         .font(.caption)
                 
@@ -28,7 +28,7 @@ struct FeedInfoView: View {
                         .resizable()
                         .frame(width: 20, height: 20)
                         .foregroundStyle(.black)
-                    Text("1,356")
+                    Text(story.comments.description)
                         .foregroundStyle(.black)
                         .font(.caption)
     
@@ -36,7 +36,7 @@ struct FeedInfoView: View {
                         .resizable()
                         .frame(width: 20, height: 20)
                         .foregroundStyle(.black)
-                    Text("4,265")
+                    Text(story.shares.description)
                         .foregroundStyle(.black)
                         .font(.caption)
                 }
@@ -49,7 +49,7 @@ struct FeedInfoView: View {
                         .font(.caption)
                         .foregroundColor(.black)
                         .padding(.horizontal)
-                    Text("Random commment generated from api here so it can be truncated ")
+                    Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
                         .font(.caption)
                         .foregroundColor(.gray)
                         .padding(.horizontal)
@@ -66,7 +66,5 @@ struct FeedInfoView: View {
         }
     }
 }
-#Preview {
-    FeedInfoView(story: Story(id: UUID(), user: User(id: UUID(), name: "Rastislav", profileImageURL: ""), imageURL: "", timestamp: Date.now))
-}
+
 

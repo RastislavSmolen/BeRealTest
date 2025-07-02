@@ -39,7 +39,7 @@ struct FeedCellView: View {
                             Button(action: {
                                 print("Tapped")
                             }) {
-                                Text("Subscribe")
+                                Text("subscribe_text")
                                     .foregroundColor(.white)
                                     .font(.caption)
                                     .frame(width: 65, height: 20)
@@ -67,7 +67,4 @@ struct FeedCellView: View {
         .padding(.horizontal)
         .padding(.bottom, 8)
     }
-}
-#Preview {
-    FeedCellView(story: Story(id: UUID() , user: User(id: UUID(), name: "Ras", profileImageURL: ""), imageURL:"https://i.pravatar.cc/150", timestamp: Date.now))
 }

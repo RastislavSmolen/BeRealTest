@@ -16,7 +16,7 @@ struct FeedView: View {
                 VStack(alignment: .leading) {
                     // MARK: - Horizontal Stories
                     HStack {
-                        Text("Stories")
+                        Text("stories_text")
                             .font(.headline)
                             .padding(.horizontal)
                         Spacer()

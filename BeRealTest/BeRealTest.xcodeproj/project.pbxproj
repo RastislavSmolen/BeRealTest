@@ -24,9 +24,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		447510A52E15AA7D00664D08 /* BeRealTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeRealTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		447510B72E15AA8100664D08 /* BeRealTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeRealTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		447510C12E15AA8100664D08 /* BeRealTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeRealTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		447511092E15CE7900664D08 /* BeRealTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeRealTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4475110A2E15CE7900664D08 /* BeRealTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeRealTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4475110B2E15CE7900664D08 /* BeRealTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeRealTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -78,18 +78,10 @@
 				447510A72E15AA7D00664D08 /* BeRealTest */,
 				447510BA2E15AA8100664D08 /* BeRealTestTests */,
 				447510C42E15AA8100664D08 /* BeRealTestUITests */,
-				447510A62E15AA7D00664D08 /* Products */,
+				447511092E15CE7900664D08 /* BeRealTest.app */,
+				4475110A2E15CE7900664D08 /* BeRealTestTests.xctest */,
+				4475110B2E15CE7900664D08 /* BeRealTestUITests.xctest */,
 			);
-			sourceTree = "<group>";
-		};
-		447510A62E15AA7D00664D08 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				447510A52E15AA7D00664D08 /* BeRealTest.app */,
-				447510B72E15AA8100664D08 /* BeRealTestTests.xctest */,
-				447510C12E15AA8100664D08 /* BeRealTestUITests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -114,7 +106,7 @@
 			packageProductDependencies = (
 			);
 			productName = BeRealTest;
-			productReference = 447510A52E15AA7D00664D08 /* BeRealTest.app */;
+			productReference = 447511092E15CE7900664D08 /* BeRealTest.app */;
 			productType = "com.apple.product-type.application";
 		};
 		447510B62E15AA8100664D08 /* BeRealTestTests */ = {
@@ -137,7 +129,7 @@
 			packageProductDependencies = (
 			);
 			productName = BeRealTestTests;
-			productReference = 447510B72E15AA8100664D08 /* BeRealTestTests.xctest */;
+			productReference = 4475110A2E15CE7900664D08 /* BeRealTestTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		447510C02E15AA8100664D08 /* BeRealTestUITests */ = {
@@ -160,7 +152,7 @@
 			packageProductDependencies = (
 			);
 			productName = BeRealTestUITests;
-			productReference = 447510C12E15AA8100664D08 /* BeRealTestUITests.xctest */;
+			productReference = 4475110B2E15CE7900664D08 /* BeRealTestUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -192,11 +184,12 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
 			);
 			mainGroup = 4475109C2E15AA7D00664D08;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 447510A62E15AA7D00664D08 /* Products */;
+			productRefGroup = 4475109C2E15AA7D00664D08;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -329,6 +322,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -386,6 +380,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
