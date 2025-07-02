@@ -10,6 +10,7 @@ This project implements a simplified Instagram-style story and post feed using S
     • Modular and scalable code structure.
     • Basic UI components and navigation.
     • Basic tests of the models 
+    • Translations for EN-FR 
 
 ⸻
 
@@ -18,7 +19,6 @@ How to Run
     2.    Build and run the app on the iOS Simulator or a physical device.
     3.    The feed and stories will load automatically with simulated network delay (~1 second).
     4.    Scroll to the bottom of the feed to trigger infinite loading of posts.
-    5.    Tap on user images or posts to interact (some UI elements are placeholders).
 
 ⸻
 
@@ -30,7 +30,8 @@ What’s Missing
     •    Basic layout without advanced styling or smooth story transitions.
     •    Unit tests cover only ViewModels with simulated delays; UI tests are missing.
     •    Performance Optimization: Currently uses fixed delays; real-world apps should use Combine or async/await for better responsiveness.
-
+    
+PS: I have tried to do as much as possible with the time I had, and I had to decide between finish one thing or not finnishing anything.
 ⸻
 
 Technical Choices & Justifications
