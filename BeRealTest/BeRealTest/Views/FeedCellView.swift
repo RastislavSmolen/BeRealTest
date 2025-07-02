@@ -8,6 +8,7 @@ import SwiftUI
 
 struct FeedCellView: View {
     let story: Story
+    @State var isSubbed: Bool = false
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -37,12 +38,12 @@ struct FeedCellView: View {
                                 .foregroundStyle(.white)
                         Spacer()
                             Button(action: {
-                                print("Tapped")
+                                isSubbed.toggle()
                             }) {
-                                Text("subscribe_text")
+                                Text(isSubbed ? "unsubscribe_text": "subscribe_text")
                                     .foregroundColor(.white)
                                     .font(.caption)
-                                    .frame(width: 65, height: 20)
+                                    .frame(width: 80, height: 20)
                                     .overlay(RoundedRectangle(cornerRadius: 1)
                                         .stroke(Color.white, lineWidth: 1))
                                 
@@ -67,4 +68,7 @@ struct FeedCellView: View {
         .padding(.horizontal)
         .padding(.bottom, 8)
     }
+}
+#Preview {
+    FeedCellView(story: Story(id: UUID(), user: User(id: UUID(), name: "Rastislav", profileImageURL: ""), imageURL: "", timestamp: Date(), caption: "TestingTestingTestingTestingTestingTestingTesting", likes: 6546544, shares: 64512, comments: 65232))
 }
