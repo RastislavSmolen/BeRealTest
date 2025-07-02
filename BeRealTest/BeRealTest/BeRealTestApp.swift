@@ -13,7 +13,7 @@ struct BeRealTestApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            FeedView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
